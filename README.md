@@ -1,6 +1,11 @@
 # ASO App Store Screenshots
 
-A Claude Code skill that generates high-converting App Store screenshots for your iOS app. It analyzes your codebase, identifies core benefits, and creates professional screenshot images using AI.
+This repository now contains two versions of the skill:
+
+- Claude Code skill at the repo root
+- Codex skill in [`codex/`](./codex)
+
+Both guide users through generating high-converting App Store screenshots for an iOS app by analyzing the codebase, identifying core benefits, and creating polished screenshot images.
 
 ## What It Does
 
@@ -16,6 +21,10 @@ A Claude Code skill that generates high-converting App Store screenshots for you
 ```bash
 claude install-skill github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots
 ```
+
+### 1b. Add the skill to Codex
+
+Install the `codex/` subpath from this repository so Codex gets a self-contained skill bundle with its own `SKILL.md`, scripts, and assets.
 
 ### 2. Install Python dependencies
 
@@ -84,7 +93,8 @@ The `final/` folder contains App Store-ready screenshots at exact Apple dimensio
 
 | File | Purpose |
 |------|---------|
-| `SKILL.md` | The skill prompt — defines the multi-phase workflow |
+| `SKILL.md` | Claude skill prompt at the repo root |
+| `codex/SKILL.md` | Codex skill prompt |
 | `compose.py` | Deterministic scaffold generator (Pillow-based) |
 | `generate_frame.py` | Generates the device frame template |
 | `showcase.py` | Generates the side-by-side showcase image |
